@@ -42,7 +42,7 @@
 
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/pass"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:ems="10"
