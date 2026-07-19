@@ -8,12 +8,12 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/loginpage"
+        android:id="@+id/loginPage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Login Page"
-        android:textColor="#2196F3"
+        android:text="@string/login_page"
+        android:textColor="#01486A"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,32 +28,33 @@
         android:id="@+id/phone"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:autoText="true"
+        android:layout_height="48dp"
         android:ems="10"
-        android:hint="Phone"
+        android:hint="@string/phone"
         android:inputType="number|phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137" />
+        app:layout_constraintVertical_bias="0.137"
+        android:autofillHints="phone"/>
 
 
     <EditText
         android:id="@+id/pass"
         android:layout_width="380dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textVisiblePassword"
+        android:hint="@string/password"
+        android:inputType="text|textWebPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.233"
+        android:autofillHints="password"/>
 
 
     <Button
@@ -61,7 +62,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#2196F3"
-        android:text="Login"
+        android:text="@string/login_button"
+        android:textColor="#000000"
+        android:textColorLink="#901F1F"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,11 +72,11 @@
         app:layout_constraintVertical_bias="0.36" />
 
     <TextView
-        android:id="@+id/forgotpass"
+        android:id="@+id/forgotPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Forgot your password?"
-        android:textColor="#03A9F4"
+        android:text="@string/forgot_password"
+        android:textColor="#01486A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.104"
