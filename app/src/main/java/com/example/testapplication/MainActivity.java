@@ -2,7 +2,8 @@ package com.example.testapplication;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,14 +20,80 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (View v, WindowInsetsCompat insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.buttonMultiplication), (View v, WindowInsetsCompat insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
     }
 
-    public void login(View view) {
-        Toast.makeText(this, "Login Succes", Toast.LENGTH_LONG).show();
+    public void additional(View view) {
+        //identifer
+        EditText number1 = findViewById(R.id.number1);
+        EditText number2 = findViewById(R.id.number2);
+        TextView textView = findViewById(R.id.textView);
+
+        //fetch
+        String num1 = number1.getText().toString();
+        String num2 = number2.getText().toString();
+        int hasil = Integer.parseInt(num1) + Integer.parseInt(num2);
+
+        //show
+        textView.setText("Hasil: " + hasil);
+
+    }
+    public void subtraction(View view) {
+        //identifer
+        EditText number1 = findViewById(R.id.number1);
+        EditText number2 = findViewById(R.id.number2);
+        TextView textView = findViewById(R.id.textView);
+        //fetch
+        String num1 = number1.getText().toString();
+        String num2 = number2.getText().toString();
+        int hasil = Integer.parseInt(num1) - Integer.parseInt(num2);
+
+
+        //show
+        textView.setText("Hasil: " + hasil);
+    }
+    public void multiplication(View view) {
+        //identifer
+        EditText number1 = findViewById(R.id.number1);
+        EditText number2 = findViewById(R.id.number2);
+        TextView textView = findViewById(R.id.textView);
+
+        //fetch
+        String num1 = number1.getText().toString();
+        String num2 = number2.getText().toString();
+        int hasil = Integer.parseInt(num1) * Integer.parseInt(num2);
+
+        //show
+        textView.setText("Hasil: " + hasil);
+    }
+    public void division(View view) {
+        //identifer
+        EditText number1 = findViewById(R.id.number1);
+        EditText number2 = findViewById(R.id.number2);
+        TextView textView = findViewById(R.id.textView);
+
+        //fetch
+        String num1 = number1.getText().toString();
+        String num2 = number2.getText().toString();
+        int hasil = Integer.parseInt(num1) / Integer.parseInt(num2);
+
+        //show
+        textView.setText("Hasil: " + hasil);
+    }
+
+    public void reset(View view) {
+        //identifer
+        EditText number1 = findViewById(R.id.number1);
+        EditText number2 = findViewById(R.id.number2);
+        TextView textView = findViewById(R.id.textView);
+
+        //reset
+        number1.setText("");
+        number2.setText("");
+        textView.setText("");
     }
 }

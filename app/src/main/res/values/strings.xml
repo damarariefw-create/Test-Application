@@ -1,9 +1,7 @@
 <resources>
     <string name="app_name">Test Application</string>
-    <string name="login_page">Login Page</string>
+    <string name="calculator_page">Calculator Page</string>
     <string name="login_button">Login</string>
-    <string name="phone">Phone</string>
-    <string name="password">Password</string>
-    <string name="forgot_password">Forgot your password?</string>
-
+    <string name="number1">1</string>
+    <string name="number2">2</string>
 </resources>

@@ -2,18 +2,18 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/buttonMultiplication"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:onClick="login"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/loginPage"
+        android:id="@+id/page"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/login_page"
+        android:text="@string/calculator_page"
         android:textColor="#01486A"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -26,64 +26,98 @@
 
 
     <EditText
-        android:id="@+id/phone"
+        android:id="@+id/number1"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
-        android:layout_width="380dp"
+        android:layout_width="150dp"
         android:layout_height="48dp"
-        android:autofillHints="phone"
+        android:layout_marginStart="50dp"
+        android:autofillHints="number1"
         android:ems="10"
-        android:hint="@string/phone"
-        android:inputType="number|phone"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.137" />
 
-
     <EditText
-        android:id="@+id/pass"
-        android:layout_width="380dp"
+        android:id="@+id/number2"
+        style="@style/Widget.AppCompat.AutoCompleteTextView"
+        android:layout_width="150dp"
         android:layout_height="48dp"
-        android:autofillHints="password"
+        android:layout_marginEnd="50dp"
+        android:autofillHints="number2"
         android:ems="10"
-        android:hint="@string/password"
-        android:inputType="text|textWebPassword"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.137" />
+
+    <Button
+        android:id="@+id/buttonAddition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:onClick="additional"
+        android:text="+"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <Button
+        android:id="@+id/buttonSubtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="20dp"
+        android:onClick="subtraction"
+        android:text="-"
+        app:layout_constraintStart_toEndOf="@+id/buttonAddition"
+        app:layout_constraintTop_toBottomOf="@+id/number1" />
+
+    <Button
+        android:id="@+id/buttonMultiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="7dp"
+        android:onClick="multiplication"
+        android:text="*"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDivision"
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:onClick="reset"
+        android:text="Reset"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonDivision"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
-        android:onClick="login"
-        android:text="@string/login_button"
-        android:textColor="#000000"
-        android:textColorLink="#901F1F"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="division"
+        android:text="/"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintTop_toBottomOf="@+id/number2" />
 
     <TextView
-        android:id="@+id/forgotPass"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/forgot_password"
-        android:textColor="#01486A"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="250dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304" />
+        app:layout_constraintTop_toBottomOf="@+id/page" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
