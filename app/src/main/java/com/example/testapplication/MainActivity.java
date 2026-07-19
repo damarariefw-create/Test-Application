@@ -24,13 +24,9 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
 
-        Button button = findViewById(R.id.button);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(MainActivity.this, "Login Success", Toast.LENGTH_SHORT).show();
-            }
-        });
+    public void login(View view) {
+        Toast.makeText(this, "Login Succes", Toast.LENGTH_LONG).show();
     }
 }

@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="login"
     tools:context=".MainActivity">
 
     <TextView
@@ -29,6 +30,7 @@
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="380dp"
         android:layout_height="48dp"
+        android:autofillHints="phone"
         android:ems="10"
         android:hint="@string/phone"
         android:inputType="number|phone"
@@ -37,14 +39,14 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.137"
-        android:autofillHints="phone"/>
+        app:layout_constraintVertical_bias="0.137" />
 
 
     <EditText
         android:id="@+id/pass"
         android:layout_width="380dp"
         android:layout_height="48dp"
+        android:autofillHints="password"
         android:ems="10"
         android:hint="@string/password"
         android:inputType="text|textWebPassword"
@@ -53,8 +55,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.233"
-        android:autofillHints="password"/>
+        app:layout_constraintVertical_bias="0.233" />
 
 
     <Button
@@ -62,6 +63,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#2196F3"
+        android:onClick="login"
         android:text="@string/login_button"
         android:textColor="#000000"
         android:textColorLink="#901F1F"
