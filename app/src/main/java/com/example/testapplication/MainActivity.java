@@ -2,7 +2,6 @@ package com.example.testapplication;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -27,6 +26,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void login(View view) {
-        Toast.makeText(this, "Login Succes", Toast.LENGTH_LONG).show();
+        Toast.makeText(this, "Login Success", Toast.LENGTH_LONG).show();
     }
 }
